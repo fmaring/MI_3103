@@ -1,0 +1,40 @@
+# LaTeX build files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+*.toc
+*.out
+*.lof
+*.lot
+*.bbl
+*.blg
+*.run.xml
+*.pdf
+
+# latexmk
+build/
+
+# temporary xelatex files
+xelatex*.fls
+
+# Build directory
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Optional (recommended additions)
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
