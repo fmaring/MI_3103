@@ -3,6 +3,8 @@
 \usepackage{TEC-format}
 \usepackage{colortbl}
 \usepackage{pdfpages}
+\usepackage{float}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \graphicspath{{../Templates/Shared/Logos/}}
 
 % Course information
@@ -15,14 +17,55 @@
 \begin{document}
 
 \section{Presentación}
+El presente documento describe los lineamientos generales del proyecto del módulo de Soldadura de Procesos de Manufactura. En este se presentan los objetivos, 
+descripción del ejercicio a desarrollar, actividades a realizar, entregables y criterios de evaluación del proyecto. Al tratarse de un proyecto grupal, se espera que los y las estudiantes
+realicen un trabajo colaborativo y de calidad, aplicando los conocimientos adquiridos en el módulo y desarrollando habilidades de organización, planificación, coordinacion y comunicación.
 
 \section{Objetivos}
 
-\subsection{Objetivos Generales}
-
+\subsection{Objetivo General}
+Demostrar la aplicación de los conocimientos adquiridos en el módulo de Soldadura, relacionados el procesamiento y transformación de materiales, selección de procesos metalmecánicos para la producción de piezas, 
+componentes y conjuntos.
 \subsection{Objetivos Específicos}
+\begin{itemize}
+    \item Seleccionar según los requerimentos de diseño, el proceso de unión mas adecuado para la fabricación de componentes mediante el proceso de soldadura.
+    \item Definir una estrategia de fabricación de un ensamble seg´un los requerimientos de diseño y las propiedades mecánicas de los materiales a unir. 
+    \item Medainte el uso de herramientas CAD, generar la documentación técnica asociada a la manufactura de componentes, incluyendo planos de fabricación, 
+    lista de costos y procedimientos de fabricación. 
+\end{itemize}
 
 \section{Descripción}
+Usted es parte de una firma de ingenieros e ingenieras que trabajan en el diseño de equipo especializado para la industria química. La firma concursa para ganar el contrato para el desarrollo de un tanque de 
+filtración de cuatro etapas. Debido a la naturaleza del proceso químico, el tanque debe ser fabricado en acero inoxidable 304 y debe cumplir con los requerimientos de diseño y las normas de seguridad 
+industrial. A continuación se presentan los requerimientos de diseño y algunos diagramas conceptueles del tanque de filtración.
+
+Se requiere construir un tanque de filtrado de líquidos empleando lámina de acero inoxidable 304, calibre 8 (4,18 mm). El mismo consiste de una entrada de fluido a una altura de 100 mm y una salida 
+a una altura de 40 mm de la base del tanque. Se contará con 4 etapas de filtrado, cada etapa corresponde a un filtro rectangular que será fijado a una serie de angulares soldados a la
+pared del tanque. La fijación de los filtros se hará por medio de tornillos, tuerca, arandela, arandela de presión; todos estos elementos deberán ser de acero inoxidable. Las dimensiones
+internas del tanque (sin incluir el espesor de la lámina) serán altura 350 mm, ancho 200 mm y el largo (en el sentido de flujo) se calculará según el espaciamiento de los filtros \textbf{s} y el ancho \textbf{P} de cada uno
+definidos en los diagramas conceptuales.
+
+El tanque deberá ser sellado mediante una tapa removible del mismo material y un empaque de hule en forma de anillo rectangular de las mismas dimensiones de la tapa y de espesor 10 mm. Para la 
+fijación y sellado de latapa removible se utilizará 10 pernos distribuidos equitativamente en un anillo de reborde que será soldado a la pared exterior del tanque mediante resistencia de puntos 
+y una costura en el borde inferior. Será a criterio de los diseñadores seleccionar el método de soldadura más adecuado para cada costura. La tapa deberá contar con una agarradera fijada
+mediante RW en sus extremos, la misma debe ser fabricada con el mismo material del tanque. El diseño de la agarradera se deja a libertad de los diseñadores, debe ser ergonómico y considerar las dimensiones 
+de la mano de un adulto promedio. 
+
+Los angulares para la fijación de los filtros deberán ser unidos mediante un cordón en el extremo opuesto a la ranura del filtro y reforzados con resistencia de puntos al tanque, empleando al menos 
+4 puntos igualmente espaciados. Estos deben ser fabricados con la misma lámina del tanque y doblado con un radio de doblez de 8 mm. Para la entrada y salida de fluido del tanque, se realizará mediante
+unas válvulas que se atornillan a la pared del tanque, estas válvulas requieren que el diámetro del agujero realizado en el tanque sea de 40 mm. No se debe incluir dentro de los modelos las válvulas,
+únicamente dejar las previstas para la colocación de las  mismas en la pared del tanque. Adicionalmente se contará con una válvula de purga en el centro del tanque, el mismo requiere un agujero de 30 mm 
+de diámetro.\\
+\textbf{Notas Adicionales:}\\ 
+\begin{itemize}
+    \item Para todas las costuras se deberá dimensionar la garganta efectiva según el espesor de la lámina y declararse en planos. 
+    \item Para las uniones con el proceso de soldadura por resistencia (RW) deberá utilizarse la simbología correspondiente. 
+    \item El modelo final deberá incluir elementos de fijación: pernos con cabeza cilíndrica o botón, tipo Allen, tuercas hexagonales, arandelas planas y arandelas de presión. 
+    Todos estos elementos deberán ser de acero inoxidable, no se deben diseñar pero sí deben adicionarse en la lista de materiales y costos.
+    \item Todas las costuras deberán tener una dimensión de garganta efectiva para costuras de filete y penetración completa para uniones a tope, en el caso de soldadura por RW se debe emplear la simbología correspondiente.
+\end{itemize}
+
+A continuación se muestran varios esquemas conceptuales de lo que se requiere fabricar.
 
 \includepdf[
     pages=1-2,
@@ -30,10 +73,48 @@
 ]{Anexos/01_Descripción_Conceptual.pdf}
 
 \section{Actividades}
+La fabricación del tanque de filtrado requiere de varias etapas de manufactura, dado que se fabricará a partir de una lámina de acero inoxidable 304, es necesario realizar procesos de corte, dobblado, 
+soldadura y ensamblaje. La documentación del proyecto cuenta con tres grandes componentes:
+\begin{enumerate}
+    \item Modelado 3D del tanque de filtrado y sus componentes.
+    \item Generación de planos de fabricación y ensamble.
+    \item Elaboración de un informe técnico que documente el proceso de fabricación, costos y materiales utilizados. Esto se conoce como la lista de materiales y costos (BOM).
+\end{enumerate}
+
+A continuación se presenta un cuadro de actividades y los productos que se deben generar en cada una de ellas.
+\begin{table}[H]
+    \renewcommand{\tabularxcolumn}[1]{m{#1}}
+    \centering
+    \caption{Actividades del proyecto}
+    \label{tab:actividades}
+    \begin{tabularx}{\textwidth}{|c|X|X|c|}
+        \hline
+        \rowcolor[HTML]{003B71}
+        \color{white}\textbf{\strut Ítem} &
+        \color{white}\textbf{\strut Actividad} &
+        \color{white}\textbf{\strut Producto} &
+        \color{white}\textbf{\strut Formato} \\
+        \hline
+        1 & Investigar disponibilidad del material para la fabricación del tanque como los elementos de fijación. La búsqueda puede ser a nivel local como global, dimensiones y costo. Si se adquiere en el exterior deberá contabilizar un 29\% adicional de nacionalización.   & Lista de Materiales y Costos (BOM) & Informe Técnico \\
+        \hline
+        2 & Esquema de etapas del proceso de fabricación del tanque& Diagrama mostrando las distitnas etapas y procesos utilizados para cada etapa. Existe libertad de escogencia.& Diagrama de Proceso en el Informe Técnico. \\
+        \hline
+        3 & Diseño de plano de corte de lámina de sus medidas originales a los distintos elementos del tanque. & Plano de Corte de Lámina & Set de Planos a Entregar \\
+        \hline
+        4 & Diseño de plano de doblado de los distintos elementos del tanque (cuando requieran). & Plano de Doblado de Lámina(s) & Set de Planos a Entregar \\
+        \hline
+        5 & Diseño y modelado del tanque y cada uno de sus componentes. & Modelos 3D y planos de diseño & Set de Planos a Entregar \\
+        \hline
+        6 & Ensamble final del tanque y sus componentes (No incluye válvulas) & Ensamble del Tanque y Planos asociados & Modelo 3D y set de planos. \\
+        \hline
+        7 & Memora de Cálculos de Verificación: deberá realizar los cálculos del radio mínimo de doblado (garantizar que el radio sugerido es viable) y la garganta efectiva de las costuras de soldadura según las fórmulas correspondientes. & Cálculos de Verificación & Informe Técnico \\
+        \hline
+    \end{tabularx}
+\end{table}
+
 
 \section{Entregables}
-
-\begin{table}[htbp]
+\begin{table}[H]
     \renewcommand{\tabularxcolumn}[1]{m{#1}}
     \centering
     \caption{Entregables del proyecto}
@@ -46,53 +127,64 @@
         \color{white}\textbf{\strut Descripción} &
         \color{white}\textbf{\strut Formato} \\
         \hline
-        1 & & & \\
+        1 & Informe Técnico & Incluye: BOM, daiagrama de flujo del proceso y memoria de cálculos.  & PDF (Máximo 5 páginas en Arial 12 a línea sencilla). \\
         \hline
-        2 & & & \\
+        2 & Set de Planos de Fabricación & Incluye Ensamblaje y lista de partes, planos de corte, doblado y unión de partes con simbología de soldadura. & Impresos, PDF y formato nativo del software CAD. \\
         \hline
-        3 & & & \\
-        \hline
-        4 & & & \\
-        \hline
-        5 & & & \\
+        3 & Modelos Tridimensionales del Tanque & Modelos 3D del tanque y sus componentes. & Formato nativo del software CAD. \\
         \hline
     \end{tabularx}
 \end{table}
 
-\section{Evaluación del Proyecto}
-\newcolumntype{M}{>{\centering\arraybackslash}X}
+\begin{itemize}
+\item \textbf{Fecha de Entrega: Jueves de Octubre 12:00 md - 12:30 pm}\\
+\item \textbf{Lugar de Entrega: Oficina 31 - EIE para Planos Impresos } Se deberá hacer la entrega virtual antes de esa hora. \\
+\item Entregas fuera de la fecha y hora establecida no serán aceptadas y se calificará con 0.\\
+\end{itemize}
 
-\begin{table}[htbp]
+\section{Evaluación del Proyecto}
+La evaluación del proyecto se realizará de acuerdo con la rúbrica que se presenta a continuación. Se evaluará la calidad del informe técnico, la completitud de los planos de fabricación y ensamble, 
+así como la correcta aplicación de los conocimientos adquiridos en el módulo de Soldadura. Los planos se verificarán según las normas correspondientes y todo lo aprendido en Dibujo Técnico y CAD. 
+El grupo deberá realizar una autoevaluación e incluirla como anexo al informe técnico. Cada estudiante deberá evaluar el desempeño de sus compañeros y compañeras con una nota en base 100. Estas evaluaciones 
+se ponderarán con la calificación del proyecto. 
+De la totalidad de los proyectos entregados, el grupo con el mejor proyecto se le asignará la calificación del proyecto en la prueba corta más baja. El mejor proyecto se determinará según
+los siguientes criterios:
+\begin{itemize}
+    \item Mejor presentación del informe técnico: redacción, formato y completitud.
+    \item Mejor presentación de los planos de fabricación y ensamble bajo las normas correspondientes.
+    \item Optimización de los costos y materiales de fabricación del tanque.
+\end{itemize}
+
+\newcolumntype{M}{>{\centering\arraybackslash}X}
+\begin{table}[H]
     \centering
     \caption{Rúbrica de evaluación del proyecto}
     \label{tab:evaluacion}
-
-    \begin{tabular}{|
-        >{\centering\arraybackslash}m{1.2cm}|
-        >{\centering\arraybackslash}m{12.5cm}|
-        >{\centering\arraybackslash}m{1.8cm}|
-    }
+    \begin{tabularx}{\textwidth}{|c|X|c|}
         \hline
         \rowcolor[HTML]{003B71}
         \color{white}\textbf{Ítem} &
         \color{white}\textbf{Descripción} &
         \color{white}\textbf{Valor} \\
         \hline
-        1 & & \\
+        1 & Informe Técnico - Presentación, Formato y Completitud & 10\% \\
         \hline
-        2 & & \\
+        2 & Informe Técnico - BOM y Diagrama de Flujo & 20\% \\
         \hline
-        3 & & \\
+        3 & Informe Técnico - Memoria de Cálculos & 20\% \\
         \hline
-        4 & & \\
-        \hline
-        5 & & \\
+        4 & Set de Planos de Fabricación y modelos del Tanque & 50\%  \\
         \hline
         \textbf{Total} & & \textbf{100\,\%} \\
         \hline
-    \end{tabular}
+    \end{tabularx}
 \end{table}
-
+\textcolor{red}{\textbf{Entregas incompletas, fuera del plazo establecido o planos sin la información del cajetín obtendrán una calificación final del proyecto de 0.}}
 \section{Anexos}
-
+En esta sección se incluyen algunos vínculos a materiales de referencia que pueden ser de utilidad para la realización del proyecto.\\
+\textbf{Material de Referencia:}\\
+\begin{itemize}
+    \item \href{https://my.solidworks.com/training/elearning/64/sheet-metal}{SolidWorks Entrenamiento Lámina Metálica}.
+    \item \href{https://my.solidworks.com/training/elearning/63/weldments}{SolidWorks Entrenamiento Uniones Soldadas}.
+\end{itemize}
 \end{document}
